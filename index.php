@@ -109,7 +109,7 @@
 
 <!-- input form -->
         <div class="input-container">
-            <form class="formclass" method="POST" action="/NotesApp/config.php">
+            <form class="formclass" method="POST" action="config.php">
               <div class="mb-3 my-4">
                 <label for="titletext" class="form-label">title</label>
                 <input type="text" class="form-control" id="titletext" name="titletext"aria-describedby="emailHelp">
