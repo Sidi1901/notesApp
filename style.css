@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url("assets/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y:hidden;
+}
+
+.input-container{
+    background-image: url("assets/backinput.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    margin: 40px;
+    height: 460px;
+}
+
+.notes-container{
+    width: 50%;
+    height: 460px;
+    margin: 40px;
+    overflow: hidden;
+}
+
+.formclass{
+    padding: 40px;
+}
