@@ -32,7 +32,7 @@
       </div>
       <div class="modal-body ">
 
-      <form class="formclass" method="POST" action="/NotesApp/config.php">
+      <form class="formclass" method="POST" action="config.php">
         
               
                 <div class="mb-3 my-4">
@@ -131,7 +131,7 @@
 <!-- display table -->
       <div class="notes-container">
 
-        <table class="table hover" id="myTable" style="background-color: brown;";>
+        <table class="table hover" id="myTable" style="background-color: blue;";>
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -204,7 +204,7 @@
           sno=e.target.id.substr(1,);
           if(confirm("Press a button!")){
             console.log("yes");
-            window.location=`/notesApp/config.php?delete=${sno}`;
+            window.location=`config.php?delete=${sno}`;
           }else{
             console.log("no");
           }
