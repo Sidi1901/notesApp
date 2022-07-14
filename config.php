@@ -1,4 +1,3 @@
-<!--connection to db-->
 
 <?php 
     $insert=false;
@@ -14,20 +13,37 @@
     }
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
+      
+      if(isset($_POST['snoid'])){
+        //update existing note
+        $sno=$_POST['snoid'];
+        $title=$_POST['titletextid'];
+        $des=$_POST['desctextid'];
+  
+        $sql=" UPDATE `notes` SET `title` = '$title', `description` = '$des' WHERE `sno`=$sno ";
+        $res=mysqli_query($con,$sql);
 
-      $title=$_POST['titletext'];
-      $des=$_POST['desctext'];
+        if($res){
+          $insert="true";
+          header("Location: index.php");
+        }else{
+          echo "Failed : ". mysqli_error($con);
+        }
 
-      $sql=" INSERT INTO `notes` (`title`, `description`) VALUES ('$title', '$des')";
-      $res=mysqli_query($con,$sql);
-
-      if($res){
-        $insert="true";
-        header("Location: index.php");
       }else{
-        echo "Failed : ". mysqli_error($con);
-      }
-
+        $title=$_POST['titletext'];
+        $des=$_POST['desctext'];
+  
+        $sql=" INSERT INTO `notes` (`title`, `description`) VALUES ('$title', '$des')";
+        $res=mysqli_query($con,$sql);
+  
+        if($res){
+          $insert="true";
+          header("Location: index.php");
+        }else{
+          echo "Failed : ". mysqli_error($con);
+        }
+      } 
     }
     
 ?>

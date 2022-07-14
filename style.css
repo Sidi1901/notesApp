@@ -23,9 +23,9 @@ body{
 
 .notes-container{
     width: 50%;
-    height: 460px;
     margin: 40px;
-    overflow: hidden;
+    height: 600px;
+    background-color: aqua;
 }
 
 .formclass{
