@@ -38,10 +38,11 @@ body{
 }
 
 .dataTables_scroll{
-    background-image: url("assets/adf.jpg");
-    filter: brightness(75%);
+    background-image: url("assets/abf.PNG");
+    filter: brightness(95%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 103% 150%;
+    background-position: 50% 48%;
 }
 
 .dataTables_wrapper .dataTables_filter{
@@ -63,17 +64,14 @@ body{
     font-weight: bold;
     background-color: rgb(156, 236, 203);
     margin-left: 1px;
+    opacity: 0.8;
 }
 
 .dataTables_scrollBody {
-    height: 500px;
+    height: 460px;
     font-weight: bold;
 }  
  
 .dataTables_scrollBody button{
     background-color: rgb(172, 240, 206);
 } 
-
-.dataTables_info{
-    text-decoration-color:rgb(24, 104, 24);
-}

@@ -30,12 +30,10 @@
         <h5 class="modal-title" id="exampleModalLabel">Edit note</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body ">
 
-      <form class="formclass" method="POST" action="config.php">
-        
-              
-                <div class="mb-3 my-4">
+      <div class="modal-body ">
+      <form class="formclass" method="POST" action="config.php">  
+              <div class="mb-3 my-4">
                 <input type="hidden" id="snoid" name="snoid">
               </div>
               <div class="mb-3 my-4">
@@ -46,15 +44,10 @@
                 <label for="desctextid" class="form-label">description</label>
                 <textarea type="text" class="form-control" id="desctextid" name="desctextid"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">ADD notes</button>
+              <button type="submit" class="btn btn-primary">update</button>
       </form>
-
-
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    
     </div>
   </div>
 </div>
@@ -69,7 +62,7 @@
           <a class="navbar-brand" href="#" styles="margin:auto">Notes</a>
           </div>
         </div>
-      </nav>
+    </nav>
 
 
 
@@ -80,11 +73,11 @@
         <div class="input-container">
             <form class="formclass" method="POST" action="config.php">
               <div class="mb-3 my-4">
-                <label for="titletext" class="form-label">title</label>
+                <label for="titletext" class="form-label" style="font-weight:bold">Title</label>
                 <input type="text" class="form-control" id="titletext" name="titletext"aria-describedby="emailHelp">
               </div>
               <div class="mb-3">
-                <label for="desctext" class="form-label">description</label>
+                <label for="desctext" class="form-label" style="font-weight:bold">Description</label>
                 <textarea type="text" class="form-control" id="desctext" name="desctext"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">ADD notes</button>
@@ -161,7 +154,6 @@
           titletextid.value=title;
           desctextid.value=desc;
           snoid.value=e.target.id;
-          console.log(title +" "+ desc+" "+snoid.value);
           $('#exampleModal').modal('toggle');
         })
       })
@@ -171,7 +163,7 @@
         element.addEventListener("click",(e)=>{
       
           sno=e.target.id.substr(1,);
-          if(confirm("Press a button!")){
+          if(confirm("confirm deletion!")){
             console.log("yes");
             window.location=`config.php?delete=${sno}`;
           }else{
