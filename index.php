@@ -131,7 +131,7 @@
 <!-- display table -->
       <div class="notes-container">
 
-        <table class="table hover" id="myTable" style="background-color: blue;";>
+        <table class="table hover" id="myTable" style="background-color: blue; height:400px";>
             <thead>
               <tr>
                 <th scope="col">#</th>
