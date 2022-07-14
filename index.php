@@ -2,6 +2,7 @@
   include("config.php");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
     <title>NotesApp</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link href="style.css" rel="stylesheet">
 
@@ -122,12 +124,6 @@
 
 
 
-        
-        <?php
-        if($insert){
-          echo "<script>alert('Hello! I am an alert box!!')</script>";  
-        }
-        ?>
 
 
 
@@ -135,7 +131,7 @@
 <!-- display table -->
       <div class="notes-container">
 
-        <table class="table hover" id="myTable">
+        <table class="table hover" id="myTable" style="background-color: brown;";>
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -150,13 +146,15 @@
                   $sql="SELECT * FROM `notes`";
                   $res=mysqli_query($con, $sql);
                   $sno=0;
+
+
                   while($rownum=mysqli_fetch_assoc($res)){  
                     $sno=$sno+1;
                     echo "<tr>
                       <th scope='row'>".$sno."</th>
                       <td>".$rownum['title']."</td>
                       <td>".$rownum['description']."</td>
-                      <td><button class='edit' id=".$rownum['sno'].">Edit</button><button>Delete</button></td>
+                      <td><button class='edit' id=".$rownum['sno'].">Edit</button> <button class='delete' id=d".$rownum['sno'].">Delete</button></td>
                     </tr>";
                   }  
                 ?>
@@ -173,7 +171,7 @@
 
       $(document).ready(function () {
       $('#myTable').DataTable({
-        scrollY: '460px',
+        scrollY: '350px',
         scrollCollapse: true,
         paging: false,
       });
@@ -196,6 +194,20 @@
           snoid.value=e.target.id;
           console.log(title +" "+ desc+" "+snoid.value);
           $('#exampleModal').modal('toggle');
+        })
+      })
+
+      deletee=document.getElementsByClassName('delete');
+      Array.from(deletee).forEach((element)=>{
+        element.addEventListener("click",(e)=>{
+      
+          sno=e.target.id.substr(1,);
+          if(confirm("Press a button!")){
+            console.log("yes");
+            window.location=`/notesApp/config.php?delete=${sno}`;
+          }else{
+            console.log("no");
+          }
         })
       })
     </script>

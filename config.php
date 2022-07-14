@@ -2,10 +2,10 @@
 <?php 
     $insert=false;
 
-    $server = "localhost";
-    $username = "root";
-    $password ="";
-    $db="notes";
+    $server = "sql6.freesqldatabase.com";
+    $username = "sql6506473";
+    $password ="zy1TPuV8Pw";
+    $db="sql6506473";
     $con=mysqli_connect($server, $username, $password, $db);
 
     if(!$con){
@@ -44,6 +44,20 @@
           echo "Failed : ". mysqli_error($con);
         }
       } 
+    }
+
+
+    if(isset($_GET['delete'])){
+      $sno=$_GET['delete'];
+      $sql="DELETE FROM `notes` WHERE `notes`.`sno` = $sno";
+      $res=mysqli_query($con,$sql);
+  
+        if($res){
+          $insert="true";
+          header("Location: index.php");
+        }else{
+          echo "Failed : ". mysqli_error($con);
+        }
     }
     
 ?>

@@ -24,10 +24,35 @@ body{
 .notes-container{
     width: 50%;
     margin: 40px;
-    height: 600px;
-    background-color: aqua;
+    height: 300px;
 }
 
 .formclass{
     padding: 40px;
+}
+
+.table{
+    height:300px;
+}
+
+.dataTables_wrapper:after{
+    height: 10px
+}
+
+#myTable_wrapper{
+    color: blue;
+    background-color: brown;
+}
+
+.dataTables_scroll{
+    color: brown;
+    background-color: brown;
+}
+
+.notes-container {
+
+}
+
+table#myTable{
+    background-color: blue;
 }
