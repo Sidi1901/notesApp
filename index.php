@@ -57,12 +57,15 @@
 
 
 <!--navbar-->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="height: 40px">
+    <a class="navbar-brand" > <img src="assets/logo.png"  style="height: 36px; width:36px"></a>
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" styles="margin:auto">Notes</a>
+          <a class="navbar-brand">Notes</a>
           </div>
         </div>
     </nav>
+
+    
 
 
 
