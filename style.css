@@ -18,38 +18,58 @@ body{
     background-size: cover;
     width: 50%;
     margin: 40px;
-    height: 460px;
+    height: 400px;
 }
 
 .notes-container{
     width: 50%;
     margin: 40px;
-    height: 300px;
 }
 
 .formclass{
     padding: 40px;
 }
 
-.table{
-    height:300px;
-}
 
-.dataTables_wrapper:after{
-    height: 10px
-}
 
-#myTable_wrapper{
-    color: blue;
-    background-color: brown;
+
+.dataTables_scrollHead .table{
+    height:0px;
 }
 
 .dataTables_scroll{
-    color: brown;
-    background-color: brown;
+    background-image: url("assets/adf.jpg");
+    filter: brightness(75%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dataTables_wrapper .dataTables_filter{
+    margin: 8px;
 }
 
 
-table#myTable{
-    background-color: blue;
+.dataTables_wrapper .dataTables_filter label{
+    font-size: 12px;
+    font-weight: bold;
 }
+
+.dataTables_wrapper .dataTables_filter input{
+    background-color: aliceblue;
+}
+
+.dataTables_scrollHeadInner th{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(156, 236, 203);
+    margin-left: 1px;
+}
+
+.dataTables_scrollBody {
+   
+    font-weight: bold;
+}  
+ 
+.dataTables_scrollBody button{
+    background-color: rgb(172, 240, 206);
+} 
