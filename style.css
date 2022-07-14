@@ -66,10 +66,14 @@ body{
 }
 
 .dataTables_scrollBody {
-   
+    height: 500px;
     font-weight: bold;
 }  
  
 .dataTables_scrollBody button{
     background-color: rgb(172, 240, 206);
 } 
+
+.dataTables_info{
+    text-decoration-color:rgb(24, 104, 24);
+}
