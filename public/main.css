@@ -1,19 +1,15 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 
-body{
-    background-image: url("assets/back1.jpg");
+.main-con{
+    background-image: url("../assets/back1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y:hidden;
+    height:100%;
+    width: 100%;
 }
 
 .input-container{
-    background-image: url("assets/backinput.png");
+    background-image: url("../assets/backinput.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
@@ -38,7 +34,7 @@ body{
 }
 
 .dataTables_scroll{
-    background-image: url("assets/abf.PNG");
+    background-image: url("../assets/abf.PNG");
     filter: brightness(95%);
     background-repeat: no-repeat;
     background-size: 103% 150%;
