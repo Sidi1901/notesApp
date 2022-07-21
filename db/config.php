@@ -1,15 +1,15 @@
 
 <?php 
 
-    // $server = "sql6.freesqldatabase.com";
-    // $username = "sql6506473";
-    // $password ="zy1TPuV8Pw";
-    // $db="sql6506473";
+    $server = "sql6.freesqldatabase.com";
+    $username = "sql6506473";
+    $password ="zy1TPuV8Pw";
+    $db="sql6506473";
 
-    $server = "localhost";
-    $username = "root";
-    $password ="";
-    $db="notes";
+    // $server = "localhost";
+    // $username = "root";
+    // $password ="";
+    // $db="notes";
     $con=mysqli_connect($server, $username, $password, $db);
 
     if(!$con){
