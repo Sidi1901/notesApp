@@ -1,12 +1,21 @@
 
 
+
 .main-con{
+    background:url("../assets/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    width: 100%;
+}
+
+/* .main-con{
     background-image: url("../assets/back1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height:100%;
     width: 100%;
-}
+} */
 
 .input-container{
     background-image: url("../assets/backinput.png");
