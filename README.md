@@ -1,7 +1,9 @@
 # notesApp
 This application is made for writing and saving notes for both individuals and teams. 
+
 if someone wants to add notes in a group just share the id. 
-Tech stack used is HTML, CSS, php, Mysql and js
+
+Tech stack used : **HTML, CSS, php, Mysql and js**
 
 ![image](https://user-images.githubusercontent.com/62303912/180290610-4f9e3a14-8b32-4a1d-a7f1-9927346f90bd.png)
 
