@@ -3,8 +3,9 @@
 if($_SERVER['REQUEST_METHOD']=='POST'){
   include("db/config.php");
 
-  $username=$_POST["userid"];
+  $username=$_POST["usernameid"];
   $password=$_POST["passwordid"];
+  $userid=$_POST["userid"];
 
   $sql="SELECT * FROM `users` WHERE `username` = '$username' AND `userpassword` = '$password'";
   $res=mysqli_query($con,$sql);
@@ -14,7 +15,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
-            header("location: home.php");
+            $_SESSION['userid'] = $userid;
+            header("location: index.php");
     // while($row=mysqli_fetch_assoc($res)){
     //     if (password_verify($password, $row['userpassword'])){ 
     //         $login = true;
@@ -29,7 +31,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
     
 else{
-  echo "<script>alert('invalid username or password');</script>";
+  echo "<script>alert('invalid login');</script>";
 }
 }
 ?>
@@ -57,7 +59,11 @@ else{
     <div class="mb-3">
 
     <div class="mb-3">
-      <label for="userid" class="form-label fw-bold">User name</label>
+      <label for="usernameid" class="form-label fw-bold">User name</label>
+      <input type="text" class="form-control" id="usernameid" aria-describedby="emailHelp" name="usernameid">
+    </div>
+    <div class="mb-3">
+      <label for="userid" class="form-label fw-bold">user ID</label>
       <input type="text" class="form-control" id="userid" aria-describedby="emailHelp" name="userid">
     </div>
     <div class="mb-3">

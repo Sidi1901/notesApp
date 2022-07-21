@@ -6,6 +6,8 @@
     if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         header("location: signin.php");
     }
+
+   
 ?>
 
 
@@ -21,13 +23,17 @@
     
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link href="public/style.css" rel="stylesheet">
-    <link href="public/main.css" rel="stylesheet">
+    <link href="public/home.css" rel="stylesheet">
 </head>
 <body>
 
 
 
 <?php include("partials/nav.php")?>
+<!-- <?php 
+// echo" <br/>";
+// echo "<h1>".$_SESSION['teams']."</h1>";
+?> -->
 <div class=" d-flex flex-row justify-content-evenly main-con">
 
 
@@ -50,10 +56,8 @@
 
 
 
-
-
  <!-- display table -->
-      <div class="notes-container">
+  <div class="notes-container">
 
     <table class="table hover" id="myTable" >
           <thead>
@@ -62,14 +66,20 @@
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
                 <th scope="col">edit</th>
-                <th scope="col">edit</th>
+              <?php 
+
+
+                if(isset($_SESSION['teams'])){
+                  echo"<th scope='col'>edit</th>";
+                }   
+              ?>
               </tr>
           </thead>
 
           <tbody>
               <?php 
-                $username=$_SESSION['username'];
-                $sql="SELECT * FROM `notes` WHERE `username` = '$username'";
+                $userid=$_SESSION['userid'];
+                $sql="SELECT * FROM `notes` WHERE `userID` = '$userid'";
                 $res=mysqli_query($con, $sql);
                 $sno=0;
 
@@ -79,8 +89,14 @@
                   echo "<tr>
                   <th scope='row'>".$sno."</th>
                   <td>".$rownum['title']."</td>
-                  <td>".$rownum['description']."</td>
-                  <td>".$rownum['username']."</td>
+                  <td>".$rownum['description']."</td>";
+
+                  if(isset($_SESSION['teams'])){
+                  echo"
+                  <td>".$rownum['username']."</td>";
+                  }
+
+                  echo"
                   <td><button class='edit' id=".$rownum['sno'].">Edit</button> <button class='delete' id=d".$rownum['sno'].">Delete</button></td>
                 </tr>";
               }  

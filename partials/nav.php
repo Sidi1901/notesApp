@@ -10,7 +10,15 @@
 
     <div class="container-fluid">
       <a class="navbar-brand">Note</a>
-      <h3 class="text-white fw-bold">welcome <?php echo $_SESSION['username'] ; ?></h3>
+      <?php
+      if (isset($_SESSION['loggedin'])) {
+          echo "<h3 class='text-white fw-bold'>welcome".$_SESSION['username']."</h3>";
+      }else{
+            echo"<h3 class='text-white fw-bold'>welcome</h3>";
+      }
+      ?>
+
+       <!-- <?php echo $_SESSION['username'] ; ?></h3> -->
       <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link fw-bold" aria-current="page" href="index.php">Home</a>

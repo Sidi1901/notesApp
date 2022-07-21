@@ -28,11 +28,12 @@ include("config.php");
       $title=$_POST['titletext'];
       $des=$_POST['desctext'];
       $username=$_SESSION['username'];
+      $userid=$_SESSION['userid'];
 
       if($title===""){
 
       }else{
-        $sql=" INSERT INTO `notes` (`title`, `description`,`username`) VALUES ('$title', '$des','$username')";
+        $sql=" INSERT INTO `notes` (`title`, `description`,`username`,`userid`) VALUES ('$title', '$des','$username','$userid')";
         $res=mysqli_query($con,$sql);
 
         if($res){

@@ -34,11 +34,10 @@
 }
 
 .dataTables_scroll{
-    /* background-image: url("../assets/adf.png"); */
-    filter: brightness(95%);
+    background-image: url("../assets/abf2.PNG");
     background-repeat: no-repeat;
-    background-size: 103% 150%;
-    background-position: 50% 48%;
+    background-size: cover;
+    /* background-position: 50% 48%; */
 }
 
 .dataTables_wrapper .dataTables_filter{

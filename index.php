@@ -1,3 +1,9 @@
+<?php
+     if(session_status()==PHP_SESSION_NONE){
+        session_start();
+      }  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +28,8 @@
             <h1><a style="color:white; text-decoration:none;" href="" class="typewrite" data-period="2000" data-type='[ "Are you tired of rembering tasks?", "Start now", "Task manager"]'><span class="wrap"></span></a></h1>
         </div>
         <div class=" btn-con d-flex align-self-center my-5">
-            <button type="button" class="btn button-63 btn-outline-primary btn-lg mx-3 flex-fill" role="button">Personal</button>
-            <button type="button" class="btn button-63 btn-outline-primary btn-lg mx-3 flex-fill" role="button">Team</button>
+            <button type="button" class="personal btn button-63 btn-outline-primary btn-lg mx-3 flex-fill" role="button" onclick="myper()">Personal</button>
+            <button type="button" class="team btn button-63 btn-outline-primary btn-lg mx-3 flex-fill" role="button" onclick="myteam()">Team</button>
         </div>
 
         <div class=" align-self-center my-5">
@@ -33,4 +39,26 @@
 
 </body>
 <script src="public/index.js"></script>
+
+<script>
+
+personal=document.getElementsByClassName('personal');
+    Array.from(personal).forEach((element)=>{
+        element.addEventListener("click",(e)=>{
+            window.location=`home.php`;
+      })
+    })
+    
+teams=document.getElementsByClassName('team');
+    Array.from(teams).forEach((element)=>{
+        element.addEventListener("click",(e)=>{
+            window.location=`db/team.php`;
+      })
+    })
+    
+    
+
+
+</script>
+
 </html>
