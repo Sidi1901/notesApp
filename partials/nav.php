@@ -1,0 +1,37 @@
+ <!--navbar-->
+<?php
+  if(session_status()==PHP_SESSION_NONE){
+      session_start();
+  }
+ 
+?>
+ <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="height: 40px">
+    <a class="navbar-brand" > <img src="assets/logo.png"  style="height: 36px; width:36px"></a>
+
+    <div class="container-fluid">
+      <a class="navbar-brand">Note</a>
+      <h3 class="text-white fw-bold">welcome <?php echo $_SESSION['username'] ; ?></h3>
+      <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" aria-current="page" href="index.php">Home</a>
+            </li>v
+            <li class="nav-item">
+              <a class="nav-link fw-bold" aria-current="page" href="home.php">Dashboard</a>
+            </li>
+
+            <?php
+              if (isset($_SESSION['loggedin'])) {
+                echo"<li class='nav-item'>
+                <a class='nav-link fw-bold' href='db/logout.php'>logout</a>
+                </li>";
+              }else{
+                echo"<li class='nav-item'>
+                <a class='nav-link fw-bold' href='db/logout.php'>login</a>
+                </li>";
+              }
+            ?>
+
+      </ul>
+
+  </div>
+</nav>

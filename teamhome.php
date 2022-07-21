@@ -1,11 +1,5 @@
 <?php 
   include("db/crud.php");
-  if(session_status()==PHP_SESSION_NONE){
-    session_start();
-  }  
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-        header("location: signin.php");
-    }
 ?>
 
 
@@ -28,6 +22,8 @@
 
 
 <?php include("partials/nav.php")?>
+
+    
 <div class=" d-flex flex-row justify-content-evenly main-con">
 
 
@@ -62,14 +58,12 @@
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
                 <th scope="col">edit</th>
-                <th scope="col">edit</th>
               </tr>
           </thead>
 
           <tbody>
               <?php 
-                $username=$_SESSION['username'];
-                $sql="SELECT * FROM `notes` WHERE `username` = '$username'";
+                $sql="SELECT * FROM `notes`";
                 $res=mysqli_query($con, $sql);
                 $sno=0;
 
@@ -80,7 +74,6 @@
                   <th scope='row'>".$sno."</th>
                   <td>".$rownum['title']."</td>
                   <td>".$rownum['description']."</td>
-                  <td>".$rownum['username']."</td>
                   <td><button class='edit' id=".$rownum['sno'].">Edit</button> <button class='delete' id=d".$rownum['sno'].">Delete</button></td>
                 </tr>";
               }  

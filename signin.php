@@ -1,4 +1,39 @@
 
+<?php 
+if($_SERVER['REQUEST_METHOD']=='POST'){
+  include("db/config.php");
+
+  $username=$_POST["userid"];
+  $password=$_POST["passwordid"];
+
+  $sql="SELECT * FROM `users` WHERE `username` = '$username' AND `userpassword` = '$password'";
+  $res=mysqli_query($con,$sql);
+  $num = mysqli_num_rows($res);
+  if ($num == 1){
+            $login = true;
+            session_start();
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $username;
+            header("location: home.php");
+    // while($row=mysqli_fetch_assoc($res)){
+    //     if (password_verify($password, $row['userpassword'])){ 
+    //         $login = true;
+    //         session_start();
+    //         $_SESSION['loggedin'] = true;
+    //         $_SESSION['username'] = $username;
+    //         header("location: home.php");
+    //     } 
+    //     else{
+    //       echo "<script>alert('invalid username or password');</script>";
+    //     }
+    }
+    
+else{
+  echo "<script>alert('invalid username or password');</script>";
+}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,21 +52,31 @@
 
 <!--form-->
 <div class="d-flex flex-row justify-content-evenly reg-con">
-  <form class="regform border border-warning my-5 rounded-end shadow-lg p-3 mb-5  rounded"method="POST">
+  <form class="regform border border-warning my-5 rounded-end shadow-lg p-3 mb-5  rounded" method="POST" action="signin.php">
     <div class="mb-3">
     <div class="mb-3">
-      <label for="userid" class="form-label">User name</label>
-      <input type="email" class="form-control" id="userid" aria-describedby="emailHelp" name="userid">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
     <div class="mb-3">
-      <label for="passwordid" class="form-label">Password</label>
+      <label for="userid" class="form-label fw-bold">User name</label>
+      <input type="text" class="form-control" id="userid" aria-describedby="emailHelp" name="userid">
+    </div>
+    <div class="mb-3">
+      <label for="passwordid" class="form-label fw-bold">Password</label>
       <input type="password" class="form-control" id="passwordid" name="passwordid">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <div class="mx-auto" style="width:100px">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>  
+
+    <div class=" mx-auto my-5" style="width:200px">
+        <h5>New user? <a href="signup.php">click here</a></h5>
+    </div>
   </form>
 </div>
 
 
 </body>
+
 
 </html>
