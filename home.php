@@ -62,17 +62,18 @@
     <table class="table hover" id="myTable" >
           <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">edit</th>
-              <?php 
+                <th scope="col">sno.</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <?php 
 
 
                 if(isset($_SESSION['teams'])){
-                  echo"<th scope='col'>edit</th>";
+                  echo"<th scope='col'>user</th>";
                 }   
               ?>
+              <th scope="col">Action</th>
+              
               </tr>
           </thead>
 
@@ -97,7 +98,7 @@
                   }
 
                   echo"
-                  <td><button class='edit' id=".$rownum['sno'].">Edit</button> <button class='delete' id=d".$rownum['sno'].">Delete</button></td>
+                  <td><button class='edit border-primary rounded' id=".$rownum['sno'].">Edit</button> <button class='delete border-primary rounded' id=d".$rownum['sno'].">Delete</button></td>
                 </tr>";
               }  
             ?>
@@ -156,7 +157,7 @@
 
       $(document).ready(function () {
         $('#myTable').DataTable({
-        scrollY: '350px',
+        scrollY: '300px',
         scrollCollapse: true,
         paging: false,
         });

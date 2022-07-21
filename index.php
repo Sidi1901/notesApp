@@ -25,7 +25,7 @@
 
     <div class="home-con d-flex flex-column justify-content-center">
         <div class="test-con align-self-center my-5">
-            <h1><a style="color:white; text-decoration:none;" href="" class="typewrite" data-period="2000" data-type='[ "Are you tired of rembering tasks?", "Start now", "Task manager"]'><span class="wrap"></span></a></h1>
+            <h1><a style="color:white; text-decoration:none;" href="" class="typewrite" data-period="2000" data-type='[ "Are you tired of forgetting tasks?", "Start now", "Task manager"]'><span class="wrap"></span></a></h1>
         </div>
         <div class=" btn-con d-flex align-self-center my-5">
             <button type="button" class="personal btn button-63 btn-outline-primary btn-lg mx-3 flex-fill" role="button" onclick="myper()">Personal</button>
@@ -33,7 +33,7 @@
         </div>
 
         <div class=" align-self-center my-5">
-            <h5 style="color:white;">New user? <a href="./signup.php">click here</a></h5>
+            <h5 style="color:white;">New user? <a href="./signup.php">Join now</a></h5>
         </div>
     </div>
 

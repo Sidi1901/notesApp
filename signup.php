@@ -49,7 +49,11 @@
     </div>
 
     <div class="mx-auto" style="width:100px">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+
+    <div class=" mx-auto my-2" style="width:200px">
+        <h6>Already a user? <a href="signin.php">login here</a></h6>
     </div>
   </form>
 </div>

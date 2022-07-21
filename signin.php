@@ -54,7 +54,7 @@ else{
 
 <!--form-->
 <div class="d-flex flex-row justify-content-evenly reg-con">
-  <form class="regform border border-warning my-5 rounded-end shadow-lg p-3 mb-5  rounded" method="POST" action="signin.php">
+  <form class="regform border border-warning my-2 rounded-end shadow-lg p-3 mb-5  rounded" method="POST" action="signin.php">
     <div class="mb-3">
     <div class="mb-3">
 
@@ -72,11 +72,11 @@ else{
     </div>
 
     <div class="mx-auto" style="width:100px">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Log in</button>
     </div>  
 
     <div class=" mx-auto my-5" style="width:200px">
-        <h5>New user? <a href="signup.php">click here</a></h5>
+        <h6>New user? <a href="signup.php">click here</a></h6>
     </div>
   </form>
 </div>

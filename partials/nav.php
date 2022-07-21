@@ -9,10 +9,10 @@
     <a class="navbar-brand" > <img src="assets/logo.png"  style="height: 36px; width:36px"></a>
 
     <div class="container-fluid">
-      <a class="navbar-brand">Note</a>
+      <a class="navbar-brand">Task Manager</a>
       <?php
       if (isset($_SESSION['loggedin'])) {
-          echo "<h3 class='text-white fw-bold'>welcome".$_SESSION['username']."</h3>";
+          echo "<h3 class='text-white fw-bold'>welcome ".$_SESSION['username']."</h3>";
       }else{
             echo"<h3 class='text-white fw-bold'>welcome</h3>";
       }
