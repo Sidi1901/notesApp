@@ -1,17 +1,15 @@
 # notesApp
 This application is made for writing and saving notes for both individuals and teams. 
 
--user can write, save edit and delete notes.
--user can login and logout with with his/her username. 
--users can share one ID to write notes together at the same time.
+User can write, save edit and delete notes. User can login and logout with with his/her username. Users can share one ID to write notes together at the same time.
 
 ### Technology
 
--*html* is used for markup
--*css* and *bootstap* is used for styling
--*php* is used as a backend language for interactions client and server.
--*MySql* is as database management system
--*heroku* is used for hosting 
+- *html* is used for markup.
+- *css* and *bootstap* is used for styling.
+- *php* is used as a backend language for interactions client and server.
+- *MySql* is as database management system.
+- *heroku* is used for hosting. 
 
 
 #### home page
