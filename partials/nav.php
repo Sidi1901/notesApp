@@ -5,7 +5,7 @@
   }
  
 ?>
- <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="height: 40px">
+ <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="height: 60px">
     <a class="navbar-brand" > <img src="assets/logo.png"  style="height: 36px; width:36px"></a>
 
     <div class="container-fluid">
