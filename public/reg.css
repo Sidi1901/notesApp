@@ -1,0 +1,15 @@
+
+.reg-con{
+    background-image: url("../assets/regback.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    width: 100%;
+}
+
+.regform{
+    height: 92%;
+    width: 400px;
+    background-color: rgb(179, 231, 224);
+    /* padding: 40px; */
+}
