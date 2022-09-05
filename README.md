@@ -46,7 +46,4 @@ Home is seen as a first appearing page. User can select team if he/she wants to 
 
 ..
 
-# Entity Relationship digram of project
-
-https://lucid.app/lucidchart/de2ba365-eb14-4b9c-8118-395fbddbf639/edit?viewport_loc=-192%2C-102%2C1859%2C869%2C0_0&invitationId=inv_09d4499b-92f0-4204-8072-050f382622ff#
 
