@@ -1,8 +1,6 @@
 /* index page */
 
-*{
-  height:0;
-}
+
 .home-con{
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url("../assets/homeback.png");
     background-repeat: no-repeat;
